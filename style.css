@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  filter: invert(0) grayscale(1) saturate(2) contrast(1) ;
+}
+
+.p5c-container {
+  z-index: 2;
+}
