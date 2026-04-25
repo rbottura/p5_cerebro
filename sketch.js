@@ -21,7 +21,7 @@ function setup() {
   angleMode(DEGREES)
   imageMode(CENTER)
   rectMode(CENTER)
-  pixelDensity(1)
+  pixelDensity(.3)
   // ortho(-width / 2, width / 2, -height / 2, height / 2)
 }
 
