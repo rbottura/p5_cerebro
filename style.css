@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -8,9 +9,54 @@ html, body {
 
 canvas {
   display: block;
-  filter: invert(0) grayscale(1) saturate(2) contrast(1) ;
+  filter: invert(0) grayscale(1) saturate(2) contrast(1);
 }
 
 .p5c-container {
   z-index: 2;
+}
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#loading-gif {
+  width: 120px;
+}
+
+#progress-bar-track {
+  width: 300px;
+  height: 4px;
+  background: #222;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+#loading-label {
+  color: #555;
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
 }

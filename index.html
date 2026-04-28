@@ -1,20 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Sketch</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.capture.umd.min.js"></script>
+    <!-- <script src="libraries/p5.capture.umd.min.js"></script> -->
     <!-- <script src="libraries/p5.sound.min.js"></script> -->
     <!-- <script src="libraries/p5.accessibility.js"></script> -->
   </head>
 
   <body>
+    <!-- Loading screen (shown before p5 canvas appears) -->
+    <div id="loading-screen">
+      <img id="loading-gif" src="img/cereb_resize.gif" alt="Loading…" />
+      <div id="progress-bar-track">
+        <div id="progress-bar-fill"></div>
+      </div>
+      <p id="loading-label">Loading… 0%</p>
+    </div>
+
     <script src="./functions.js"></script>
     <script src="./sketch.js"></script>
   </body>
@@ -22,7 +31,7 @@
     #p5-container {
       display: block;
       width: 400px;
-      height:400px ;
+      height: 400px;
       border: solid grey 2px;
     }
   </style>
